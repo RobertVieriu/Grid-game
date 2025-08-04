@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://blvm58q0886ii"]
+
+[ext_resource type="PackedScene" uid="uid://d23fm4olahflh" path="res://scenes/terrain_generator.tscn" id="1_wast4"]
+[ext_resource type="Script" path="res://scripts/terrain.gd" id="2_t6gam"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TerrainGenerator" parent="." instance=ExtResource("1_wast4")]
+script = ExtResource("2_t6gam")
