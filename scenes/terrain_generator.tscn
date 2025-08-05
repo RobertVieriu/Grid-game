@@ -1,18 +1,26 @@
-[gd_scene load_steps=5 format=4 uid="uid://d23fm4olahflh"]
+[gd_scene load_steps=6 format=4 uid="uid://d23fm4olahflh"]
 
-[ext_resource type="Texture2D" uid="uid://0ysmt1oeyr2b" path="res://assets/maps/placeholder_terrain_tileset.png" id="1_6lag8"]
+[ext_resource type="Texture2D" uid="uid://0ysmt1oeyr2b" path="res://assets/placeholder_terrain_tileset.png" id="1_6lag8"]
 [ext_resource type="Script" path="res://scripts/terrain.gd" id="2_2q56i"]
+[ext_resource type="Script" path="res://scripts/pathfinding.gd" id="3_f8xx6"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ewrf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i5t1g"]
 texture = ExtResource("1_6lag8")
 0:0/0 = 0
+0:0/0/custom_data_0 = 1.0
 1:0/0 = 0
+1:0/0/custom_data_0 = 1.2
 2:0/0 = 0
+2:0/0/custom_data_0 = 1.0
 3:0/0 = 0
+3:0/0/custom_data_0 = 3.0
 0:1/0 = 0
+0:1/0/custom_data_0 = 8.0
 
 [sub_resource type="TileSet" id="TileSet_4pmmo"]
-sources/0 = SubResource("TileSetAtlasSource_7ewrf")
+custom_data_layer_0/name = "walk_difficulty"
+custom_data_layer_0/type = 3
+sources/0 = SubResource("TileSetAtlasSource_i5t1g")
 
 [node name="TerrainGenerator" type="Node2D"]
 
@@ -26,3 +34,6 @@ grassThreshold = -0.45
 grassTallThreshold = -0.5
 dirtThreshold = -0.55
 rockThreshold = -0.65
+
+[node name="Pathfinding" type="Node" parent="."]
+script = ExtResource("3_f8xx6")
