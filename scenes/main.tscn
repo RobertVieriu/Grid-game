@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://blvm58q0886ii"]
+[gd_scene load_steps=8 format=4 uid="uid://blvm58q0886ii"]
 
 [ext_resource type="Texture2D" uid="uid://0ysmt1oeyr2b" path="res://assets/placeholder_terrain_tileset.png" id="1_qqge0"]
 [ext_resource type="Script" path="res://scripts/terrain.gd" id="2_t6gam"]
 [ext_resource type="Script" path="res://scripts/pathfinding.gd" id="3_vp78i"]
 [ext_resource type="PackedScene" uid="uid://cp6ah8q8378ke" path="res://scenes/pawn.tscn" id="4_6u247"]
+[ext_resource type="Script" path="res://scenes/CameraController.gd" id="5_v7q21"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61nxq"]
 texture = ExtResource("1_qqge0")
@@ -40,11 +41,9 @@ rockThreshold = -0.65
 script = ExtResource("3_vp78i")
 start = Vector2i(5, 5)
 end = Vector2i(64, 64)
-calculate = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1050, 1050)
-zoom = Vector2(0.3, 0.3)
 
 [node name="Pawn" parent="." instance=ExtResource("4_6u247")]
 position = Vector2(168, 136)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("5_v7q21")
