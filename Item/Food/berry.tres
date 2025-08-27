@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Food" load_steps=2 format=3 uid="uid://bof8hpd4pl4rh"]
+
+[ext_resource type="Script" path="res://Scripts/food.gd" id="1_65hfl"]
+
+[resource]
+script = ExtResource("1_65hfl")
+nutrition = 1.0
+foodType = 1
+foodQuality = 2
+spoilTime = 2.0
+name = "Berry"
+count = 1
+weight = 0.01
+value = 1.0

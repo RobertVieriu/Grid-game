@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cp6ah8q8378ke"]
 
-[ext_resource type="Script" path="res://pawn.gd" id="1_muob1"]
-[ext_resource type="Texture2D" uid="uid://ddcgp880oexas" path="res://assets/icon.svg" id="2_8rln2"]
+[ext_resource type="Script" path="res://Scripts/pawn.gd" id="1_muob1"]
+[ext_resource type="Texture2D" uid="uid://ddcgp880oexas" path="res://Assets/icon.svg" id="2_8rln2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v22fg"]
 radius = 7.0
