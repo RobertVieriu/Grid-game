@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://c31vsxo2ompdf"]
+
+[ext_resource type="Script" path="res://Scripts/weapon.gd" id="1_rbs5w"]
+
+[resource]
+script = ExtResource("1_rbs5w")
+weaponClass = 3
+weaponType = 0
+weaponReach = 1.0
+weaponRange = 5.0
+isMelee = true
+isRanged = true
+numberOfHandsNeeded = 1
+averageDamage = 0.0
+averagePenetration = 0.0
+weaponParry = 5.0
+name = "Dagger"
+count = 1
+weight = 1.0
+value = 65.0

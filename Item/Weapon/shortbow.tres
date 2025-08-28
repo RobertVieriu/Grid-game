@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://dqevjebd3qpps"]
+
+[ext_resource type="Script" path="res://Scripts/weapon.gd" id="1_hgl75"]
+
+[resource]
+script = ExtResource("1_hgl75")
+weaponClass = 2
+weaponType = 6
+weaponReach = 1.0
+weaponRange = 16.0
+isMelee = false
+isRanged = true
+numberOfHandsNeeded = 2
+averageDamage = 0.0
+averagePenetration = 0.0
+weaponParry = 7.0
+name = "Shortbow"
+count = 1
+weight = 3.0
+value = 80.0

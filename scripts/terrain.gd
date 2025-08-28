@@ -31,6 +31,7 @@ func _process(delta):
 
 func GenerateTerrain():
 	print("Generating Terrain...")
+	clear()
 	
 	var noise = FastNoiseLite.new()
 	noise.noise_type = FastNoiseLite.TYPE_CELLULAR
