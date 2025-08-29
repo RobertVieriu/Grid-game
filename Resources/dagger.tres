@@ -6,13 +6,15 @@
 script = ExtResource("1_rbs5w")
 weaponRole = 0
 weaponClass = 0
+weaponDamage = 6.0
+weaponPenetration = 4.0
+weaponParry = 3.0
 weaponReach = 1.0
 weaponRange = 5.0
 isMelee = true
 isRanged = true
 numberOfHandsNeeded = 1
-weaponParry = 5.0
 name = "Dagger"
 count = 1
 weight = 1.0
-value = 65.0
+value = 25.0

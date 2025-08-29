@@ -10,9 +10,11 @@ var averagePenetration : float #DON'T EDIT! WILL BE AVRG PEN OF ALL MOVES
 
 @export var weaponRole : WeaponRole
 @export var weaponClass : WeaponClass #ex Sword, Crossbow, Dagger
+@export var weaponDamage : float
+@export var weaponPenetration : float
+@export var weaponParry : float
 @export var weaponReach : float #MELEE VALUE ONLY
 @export var weaponRange : float #RANGED VALUE ONLY
 @export var isMelee : bool
 @export var isRanged : bool
 @export var numberOfHandsNeeded : int #PUT 1 OR 2 UNLESS NEW STUFF ADDED
-@export var weaponParry : float
