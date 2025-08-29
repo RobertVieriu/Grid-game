@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://27cdtk6e08as" path="res://Assets/object_tileset.png" id="1_1tl3k"]
 [ext_resource type="Script" path="res://Scripts/berry.gd" id="2_uoku7"]
-[ext_resource type="Resource" uid="uid://bof8hpd4pl4rh" path="res://Item/Food/berry.tres" id="3_dfpms"]
+[ext_resource type="Resource" uid="uid://bof8hpd4pl4rh" path="res://Resources/berry.tres" id="3_dfpms"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0mm2d"]
 atlas = ExtResource("1_1tl3k")

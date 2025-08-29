@@ -4,15 +4,13 @@
 
 [resource]
 script = ExtResource("1_hgl75")
-weaponClass = 2
-weaponType = 6
+weaponRole = 0
+weaponClass = 6
 weaponReach = 1.0
 weaponRange = 16.0
 isMelee = false
 isRanged = true
 numberOfHandsNeeded = 2
-averageDamage = 0.0
-averagePenetration = 0.0
 weaponParry = 7.0
 name = "Shortbow"
 count = 1
