@@ -6,5 +6,5 @@
 script = ExtResource("1_ctvbh")
 nutrition = 1.0
 foodType = 0
-foodQuality = 0
-spoilTime = 0.0
+foodQuality = 2
+spoilTime = 7.0

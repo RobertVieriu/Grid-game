@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://t3ixcs2g10be"]
+
+[ext_resource type="Texture2D" uid="uid://27cdtk6e08as" path="res://Assets/object_tileset.png" id="1_agrmg"]
+[ext_resource type="Script" path="res://Scripts/simple_meal.gd" id="2_d7kio"]
+[ext_resource type="Script" path="res://Scripts/food.gd" id="3_aturu"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="4_pks6e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mm2d"]
+atlas = ExtResource("1_agrmg")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="Resource" id="Resource_v0iif"]
+script = ExtResource("3_aturu")
+nutrition = 1.0
+foodType = 0
+foodQuality = 2
+spoilTime = 7.0
+
+[sub_resource type="Resource" id="Resource_ld7ms"]
+script = ExtResource("4_pks6e")
+name = "Simple Meal"
+count = 1
+weight = 1.0
+value = 25.0
+tags = Array[String](["Food"])
+food = SubResource("Resource_v0iif")
+
+[node name="Simple Meal" type="Sprite2D"]
+visible = false
+texture = SubResource("AtlasTexture_0mm2d")
+script = ExtResource("2_d7kio")
+item_data = SubResource("Resource_ld7ms")

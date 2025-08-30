@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://062caqkgcf6"]
+
+[ext_resource type="Resource" uid="uid://ctwusjotkgq71" path="res://Resources/food_stats.tres" id="1_2s13b"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_bvc25"]
+
+[resource]
+script = ExtResource("1_bvc25")
+name = ""
+count = 1
+weight = 0.5
+value = 25.0
+tags = Array[String](["Food"])
+food = ExtResource("1_2s13b")

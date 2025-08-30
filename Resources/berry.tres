@@ -7,14 +7,14 @@
 script = ExtResource("1_65hfl")
 nutrition = 1.0
 foodType = 0
-foodQuality = 0
-spoilTime = 0.0
+foodQuality = 2
+spoilTime = 7.0
 
 [resource]
 script = ExtResource("2_poafh")
-name = ""
-count = 0
-weight = 0.0
-value = 0.0
+name = "Berry"
+count = 1
+weight = 0.03
+value = 3.0
 tags = Array[String](["Food"])
 food = SubResource("Resource_v0iif")

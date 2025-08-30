@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://djmot00yijvwo"]
+
+[sub_resource type="GDScript" id="GDScript_ink0s"]
+script/source = "extends Resource
+
+class_name WeaponManager
+
+@export var currentWeapon : Weapon
+
+func _ready():
+	pass
+"
+
+[node name="WeaponManager" type="Node"]
+script = SubResource("GDScript_ink0s")

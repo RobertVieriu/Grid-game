@@ -1,14 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://bie31c15j1p60"]
+[gd_scene load_steps=8 format=3 uid="uid://bie31c15j1p60"]
 
 [ext_resource type="Texture2D" uid="uid://27cdtk6e08as" path="res://Assets/object_tileset.png" id="1_1tl3k"]
 [ext_resource type="Script" path="res://Scripts/berry.gd" id="2_uoku7"]
-[ext_resource type="Resource" uid="uid://bof8hpd4pl4rh" path="res://Resources/berry.tres" id="3_dfpms"]
+[ext_resource type="Script" path="res://Scripts/food.gd" id="3_sr4ta"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="4_6nt2v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0mm2d"]
 atlas = ExtResource("1_1tl3k")
 region = Rect2(32, 16, 16, 16)
 
+[sub_resource type="Resource" id="Resource_v0iif"]
+script = ExtResource("3_sr4ta")
+nutrition = 1.0
+foodType = 0
+foodQuality = 2
+spoilTime = 7.0
+
+[sub_resource type="Resource" id="Resource_dpg1c"]
+script = ExtResource("4_6nt2v")
+name = "Berry"
+count = 1
+weight = 0.03
+value = 3.0
+tags = Array[String](["Food"])
+food = SubResource("Resource_v0iif")
+
 [node name="Berry" type="Sprite2D"]
 texture = SubResource("AtlasTexture_0mm2d")
 script = ExtResource("2_uoku7")
-item_data = ExtResource("3_dfpms")
+item_data = SubResource("Resource_dpg1c")

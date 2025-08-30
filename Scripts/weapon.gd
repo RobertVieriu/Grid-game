@@ -5,7 +5,7 @@ class_name Weapon
 var rng = RandomNumberGenerator.new()
 var attack_weight = PackedFloat32Array()
 
-enum WeaponRole {MELEE = 0, PROJECTILE = 2, THROW = 3}
+enum WeaponRole {MELEE = 0, PROJECTILE = 1, THROW = 2}
 enum WeaponClass {DAGGER = 0, SWORD = 1, AXE = 2, MACE = 3, SPEAR = 4, POLEARM = 5, BOW = 6, CROSSBOW = 7, SLING = 8}
 var weaponAttacks : Array[String]
 var averageDamage : float #DON'T EDIT! WILL BE AVRG DMG OF ALL MOVES
