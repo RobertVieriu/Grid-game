@@ -1,18 +1,26 @@
-[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://dqevjebd3qpps"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dqevjebd3qpps"]
 
-[ext_resource type="Script" path="res://Scripts/weapon.gd" id="1_hgl75"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_sqykj"]
+[ext_resource type="Script" path="res://Scripts/weapon.gd" id="2_iylbd"]
+
+[sub_resource type="Resource" id="Resource_i7g77"]
+script = ExtResource("2_iylbd")
+weaponRole = 0
+weaponClass = 0
+weaponDamage = 6.0
+weaponPenetration = 7.0
+weaponParry = 8.0
+weaponReach = 1.0
+weaponRange = 3.0
+isMelee = true
+isRanged = true
+numberOfHandsNeeded = 1
 
 [resource]
-script = ExtResource("1_hgl75")
-weaponRole = 0
-weaponClass = 6
-weaponReach = 1.0
-weaponRange = 16.0
-isMelee = false
-isRanged = true
-numberOfHandsNeeded = 2
-weaponParry = 7.0
-name = "Shortbow"
-count = 1
-weight = 3.0
-value = 80.0
+script = ExtResource("1_sqykj")
+name = ""
+count = 0
+weight = 0.0
+value = 0.0
+tags = Array[String]([])
+weapon = SubResource("Resource_i7g77")

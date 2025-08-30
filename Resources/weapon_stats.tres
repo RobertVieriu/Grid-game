@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://bp1b872ck3hcj"]
+
+[ext_resource type="Script" path="res://Scripts/weapon.gd" id="1_mpesr"]
+
+[resource]
+script = ExtResource("1_mpesr")
+weaponRole = 0
+weaponClass = 0
+weaponDamage = 6.0
+weaponPenetration = 7.0
+weaponParry = 8.0
+weaponReach = 1.0
+weaponRange = 3.0
+isMelee = true
+isRanged = true
+numberOfHandsNeeded = 1

@@ -2,33 +2,33 @@ extends Sprite2D
 
 class_name Dagger
 
-@export var weapon : Weapon
+@export var item : Item
 
 
 func _ready() -> void:
-	weapon.weights = PackedFloat32Array([5, 1, 0.1])
-	weapon.weaponAttacks = ["Stab", "Slash", "Handle"]
-	print("Weights: ", weapon.weights)
-	weapon.HowMuchPercentage()
+	item.weapon.attack_weight = PackedFloat32Array([5.0, 1.0, 0.1])
+	item.weapon.weaponAttacks = ["Stab", "Slash", "Handle"]
+	print("attack_weight: ", item.weapon.attack_weight)
+	item.weapon.HowMuchPercentage()
 
 
 func WeaponAttack():
-	var chosenAttack = weapon.weaponAttacks[weapon.rng.rand_weighted(weapon.weights)]
+	var chosenAttack = item.weapon.weaponAttacks[item.weapon.rng.rand_weighted(item.weapon.attack_weight)]
 	var attackDamage
 	var attackPenetration
 	var attackCooldown
 	
 	if (chosenAttack == "Stab"):
-		attackDamage = weapon.weaponDamage
-		attackPenetration = weapon.weaponPenetration
-		attackCooldown = weapon.weaponCooldown
+		attackDamage = item.weapon.weaponDamage
+		attackPenetration = item.weapon.weaponPenetration
+		attackCooldown = item.weapon.weaponCooldown
 	elif (chosenAttack == "Slash"):
-		attackDamage = weapon.weaponDamage * 0.7
-		attackPenetration = weapon.weaponPenetration * 0.8
-		attackCooldown = weapon.weaponCooldown * 1.1
+		attackDamage = item.weapon.weaponDamage * 0.7
+		attackPenetration = item.weapon.weaponPenetration * 0.8
+		attackCooldown = item.weapon.weaponCooldown * 1.1
 	else:
-		attackDamage = weapon.weaponDamage * 0.1
-		attackPenetration = weapon.weaponPenetration * 0.1
-		attackCooldown = weapon.weaponCooldown * 1.4
+		attackDamage = item.weapon.weaponDamage * 0.1
+		attackPenetration = item.weapon.weaponPenetration * 0.1
+		attackCooldown = item.weapon.weaponCooldown * 1.4
 		
 	return [attackDamage, attackPenetration, attackCooldown]	

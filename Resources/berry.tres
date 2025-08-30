@@ -1,14 +1,20 @@
-[gd_resource type="Resource" script_class="Food" load_steps=2 format=3 uid="uid://bof8hpd4pl4rh"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bof8hpd4pl4rh"]
 
 [ext_resource type="Script" path="res://Scripts/food.gd" id="1_65hfl"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="2_poafh"]
 
-[resource]
+[sub_resource type="Resource" id="Resource_v0iif"]
 script = ExtResource("1_65hfl")
 nutrition = 1.0
-foodType = 1
-foodQuality = 2
-spoilTime = 2.0
-name = "Berry"
-count = 1
-weight = 0.01
-value = 1.0
+foodType = 0
+foodQuality = 0
+spoilTime = 0.0
+
+[resource]
+script = ExtResource("2_poafh")
+name = ""
+count = 0
+weight = 0.0
+value = 0.0
+tags = Array[String](["Food"])
+food = SubResource("Resource_v0iif")

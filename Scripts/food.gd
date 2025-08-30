@@ -1,4 +1,4 @@
-extends Item
+extends Resource
 
 class_name Food
 

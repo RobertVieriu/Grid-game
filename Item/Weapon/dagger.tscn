@@ -5,4 +5,4 @@
 
 [node name="Dagger" type="Sprite2D"]
 script = ExtResource("1_hw40o")
-weapon = ExtResource("2_sfrb2")
+item = ExtResource("2_sfrb2")

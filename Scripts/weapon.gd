@@ -1,9 +1,9 @@
-extends Item
+extends Resource
 
 class_name Weapon
 
 var rng = RandomNumberGenerator.new()
-var weights = PackedFloat32Array()
+var attack_weight = PackedFloat32Array()
 
 enum WeaponRole {MELEE = 0, PROJECTILE = 2, THROW = 3}
 enum WeaponClass {DAGGER = 0, SWORD = 1, AXE = 2, MACE = 3, SPEAR = 4, POLEARM = 5, BOW = 6, CROSSBOW = 7, SLING = 8}
@@ -24,13 +24,13 @@ var averagePenetration : float #DON'T EDIT! WILL BE AVRG PEN OF ALL MOVES
 
 
 func HowMuchPercentage(): #ONLY TO SEE THE CHANCE OF EACH ATTACK
-	print("The attack is: ", weaponAttacks[rng.rand_weighted(weights)])
+	print("The attack is: ", weaponAttacks[rng.rand_weighted(attack_weight)])
 	var totalNumber = 0.0
 	var i = 0
 	
-	for weight : float in weights:
+	for weight : float in attack_weight:
 		totalNumber += weight
 	
-	for weight : float in weights:
+	for weight : float in attack_weight:
 		print(weaponAttacks[i], " chance is: ", weight / totalNumber * 100)
 		i += 1
