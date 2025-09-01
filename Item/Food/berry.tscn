@@ -19,6 +19,7 @@ spoilTime = 7.0
 [sub_resource type="Resource" id="Resource_dpg1c"]
 script = ExtResource("4_6nt2v")
 name = "Berry"
+isStackable = false
 count = 1
 weight = 0.03
 value = 3.0

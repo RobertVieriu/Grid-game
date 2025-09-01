@@ -1,0 +1,90 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=13 format=3 uid="uid://clgiok7lsnm12"]
+
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_kokmw"]
+[ext_resource type="Script" path="res://Scripts/inventory.gd" id="2_siyvf"]
+[ext_resource type="Script" path="res://Scripts/food.gd" id="2_wtwcw"]
+[ext_resource type="Script" path="res://Scripts/weapon.gd" id="3_wldc3"]
+
+[sub_resource type="Resource" id="Resource_gp131"]
+script = ExtResource("2_wtwcw")
+nutrition = 1.0
+foodType = 0
+foodQuality = 0
+spoilTime = 0.0
+
+[sub_resource type="Resource" id="Resource_h5klx"]
+script = ExtResource("1_kokmw")
+name = "Apple"
+count = 1
+weight = 0.0
+value = 3.0
+isStackable = false
+tags = Array[String](["Food"])
+food = SubResource("Resource_gp131")
+
+[sub_resource type="Resource" id="Resource_v0iif"]
+script = ExtResource("2_wtwcw")
+nutrition = 1.0
+foodType = 0
+foodQuality = 2
+spoilTime = 7.0
+
+[sub_resource type="Resource" id="Resource_ft2xv"]
+script = ExtResource("1_kokmw")
+name = "Berry"
+count = 1
+weight = 0.03
+value = 3.0
+isStackable = false
+tags = Array[String](["Food"])
+food = SubResource("Resource_v0iif")
+
+[sub_resource type="Resource" id="Resource_v8hqj"]
+script = ExtResource("3_wldc3")
+weaponRole = 0
+weaponClass = 0
+weaponDamage = 6.0
+weaponPenetration = 7.0
+weaponParry = 8.0
+weaponReach = 1.0
+weaponRange = 3.0
+isMelee = true
+isRanged = true
+numberOfHandsNeeded = 1
+
+[sub_resource type="Resource" id="Resource_xfqqg"]
+script = ExtResource("1_kokmw")
+name = ""
+count = 1
+weight = 1.0
+value = 35.0
+isStackable = false
+tags = Array[String](["Weapon"])
+weapon = SubResource("Resource_v8hqj")
+
+[sub_resource type="Resource" id="Resource_i7g77"]
+script = ExtResource("3_wldc3")
+weaponRole = 0
+weaponClass = 0
+weaponDamage = 6.0
+weaponPenetration = 7.0
+weaponParry = 8.0
+weaponReach = 1.0
+weaponRange = 3.0
+isMelee = true
+isRanged = true
+numberOfHandsNeeded = 1
+
+[sub_resource type="Resource" id="Resource_uyk17"]
+script = ExtResource("1_kokmw")
+name = ""
+count = 0
+weight = 0.0
+value = 0.0
+isStackable = false
+tags = Array[String]([])
+weapon = SubResource("Resource_i7g77")
+
+[resource]
+script = ExtResource("2_siyvf")
+item = Array[ExtResource("1_kokmw")]([SubResource("Resource_h5klx"), SubResource("Resource_ft2xv"), SubResource("Resource_xfqqg"), SubResource("Resource_uyk17"), null, null, null, null, null, null])

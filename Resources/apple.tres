@@ -12,9 +12,9 @@ spoilTime = 0.0
 
 [resource]
 script = ExtResource("2_w3uwt")
-name = ""
+name = "Apple"
 count = 1
-weight = 0.0
-value = 3.0
+weight = 1.0
+value = 5.0
 tags = Array[String](["Food"])
 food = SubResource("Resource_gp131")

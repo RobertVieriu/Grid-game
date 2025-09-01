@@ -34,3 +34,7 @@ func HowMuchPercentage(): #ONLY TO SEE THE CHANCE OF EACH ATTACK
 	for weight : float in attack_weight:
 		print(weaponAttacks[i], " chance is: ", weight / totalNumber * 100)
 		i += 1
+
+
+func WeaponAttack():
+	pass
