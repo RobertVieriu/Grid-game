@@ -19,6 +19,7 @@ numberOfHandsNeeded = 1
 [resource]
 script = ExtResource("1_saaha")
 name = "Shortsword"
+isStackable = false
 count = 1
 weight = 3.0
 value = 60.0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp0e6l0rmggcy"]
+
+[ext_resource type="Script" path="res://equipmentmanager.gd" id="1_mma4c"]
+
+[node name="EquipmentManager" type="Node"]
+script = ExtResource("1_mma4c")

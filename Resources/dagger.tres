@@ -19,6 +19,7 @@ numberOfHandsNeeded = 1
 [resource]
 script = ExtResource("1_jgyjt")
 name = "Dagger"
+isStackable = false
 count = 1
 weight = 1.0
 value = 35.0

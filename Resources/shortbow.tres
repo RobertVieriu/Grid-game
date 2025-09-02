@@ -19,6 +19,7 @@ numberOfHandsNeeded = 1
 [resource]
 script = ExtResource("1_sqykj")
 name = "Shortbow"
+isStackable = false
 count = 0
 weight = 0.0
 value = 0.0

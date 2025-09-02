@@ -3,9 +3,25 @@ extends CharacterBody2D
 @onready var terrain = $"../Terrain"
 @onready var pathfinding = $"../Pathfinding"
 
+@export var inventory : Inventory
+@export var equipment : EquipmentManager
+
 const SPEED = 300.0
 
 var path = []
+
+
+func _ready():
+	#var hand_slot: EquipmentSlot = equipment.equipmentData.slots[0]
+	for s in inventory.item:	
+		if(s.name == "Dagger"):
+			if equipment.equip(equipment.equipmentData.slots[0], s):
+				print(s.name, " pre-equipped in hand")
+				
+		if(s.name == "Shortsword"):
+			if equipment.equip(equipment.equipmentData.slots[1], s):
+				print(s.name, " pre-equipped in hand")
+
 
 func _physics_process(delta):
 	

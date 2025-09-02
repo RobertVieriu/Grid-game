@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://blvm58q0886ii"]
+[gd_scene load_steps=27 format=4 uid="uid://blvm58q0886ii"]
 
 [ext_resource type="Texture2D" uid="uid://0ysmt1oeyr2b" path="res://Assets/placeholder_terrain_tileset.png" id="1_qqge0"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_rxuu2"]
@@ -8,8 +8,11 @@
 [ext_resource type="Script" path="res://Scripts/cameraController.gd" id="5_v7q21"]
 [ext_resource type="PackedScene" uid="uid://cvmfxax0qrg1g" path="res://Item/Weapon/dagger.tscn" id="6_exj5e"]
 [ext_resource type="Texture2D" uid="uid://b43ss3iq405kq" path="res://Assets/knife_placeholder.png" id="7_fxmus"]
+[ext_resource type="Script" path="res://Scripts/food.gd" id="7_x50xk"]
+[ext_resource type="Script" path="res://Scripts/inventory.gd" id="9_ngpbn"]
 [ext_resource type="Script" path="res://Scripts/item.gd" id="9_vldn4"]
 [ext_resource type="Script" path="res://Scripts/weapon.gd" id="10_jwbgu"]
+[ext_resource type="PackedScene" uid="uid://dp0e6l0rmggcy" path="res://Scenes/equipment_manager.tscn" id="12_r0iqh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61nxq"]
 texture = ExtResource("1_qqge0")
@@ -29,7 +32,91 @@ custom_data_layer_0/name = "walk_difficulty"
 custom_data_layer_0/type = 3
 sources/0 = SubResource("TileSetAtlasSource_61nxq")
 
+[sub_resource type="Resource" id="Resource_gp131"]
+script = ExtResource("7_x50xk")
+nutrition = 1.0
+foodType = 0
+foodQuality = 0
+spoilTime = 0.0
+
+[sub_resource type="Resource" id="Resource_h5klx"]
+script = ExtResource("9_vldn4")
+name = "Apple"
+isStackable = false
+count = 1
+weight = 0.0
+value = 3.0
+tags = Array[String](["Food"])
+food = SubResource("Resource_gp131")
+
+[sub_resource type="Resource" id="Resource_v0iif"]
+script = ExtResource("7_x50xk")
+nutrition = 1.0
+foodType = 0
+foodQuality = 2
+spoilTime = 7.0
+
+[sub_resource type="Resource" id="Resource_ft2xv"]
+script = ExtResource("9_vldn4")
+name = "Berry"
+isStackable = false
+count = 1
+weight = 0.03
+value = 3.0
+tags = Array[String](["Food"])
+food = SubResource("Resource_v0iif")
+
+[sub_resource type="Resource" id="Resource_ikj7k"]
+script = ExtResource("10_jwbgu")
+weaponRole = 0
+weaponClass = 1
+weaponDamage = 6.0
+weaponPenetration = 7.0
+weaponParry = 8.0
+weaponReach = 1.0
+weaponRange = 3.0
+isMelee = true
+isRanged = true
+numberOfHandsNeeded = 1
+
+[sub_resource type="Resource" id="Resource_brhd7"]
+script = ExtResource("9_vldn4")
+name = "Shortsword"
+isStackable = false
+count = 1
+weight = 3.0
+value = 60.0
+tags = Array[String](["Weapon"])
+weapon = SubResource("Resource_ikj7k")
+
 [sub_resource type="Resource" id="Resource_v8hqj"]
+script = ExtResource("10_jwbgu")
+weaponRole = 0
+weaponClass = 0
+weaponDamage = 6.0
+weaponPenetration = 7.0
+weaponParry = 8.0
+weaponReach = 1.0
+weaponRange = 3.0
+isMelee = true
+isRanged = true
+numberOfHandsNeeded = 1
+
+[sub_resource type="Resource" id="Resource_y878x"]
+script = ExtResource("9_vldn4")
+name = "Dagger"
+isStackable = false
+count = 1
+weight = 1.0
+value = 35.0
+tags = Array[String](["Weapon"])
+weapon = SubResource("Resource_v8hqj")
+
+[sub_resource type="Resource" id="Resource_w2078"]
+script = ExtResource("9_ngpbn")
+item = Array[ExtResource("9_vldn4")]([SubResource("Resource_h5klx"), SubResource("Resource_ft2xv"), SubResource("Resource_brhd7"), SubResource("Resource_y878x")])
+
+[sub_resource type="Resource" id="Resource_t4guo"]
 script = ExtResource("10_jwbgu")
 weaponRole = 0
 weaponClass = 0
@@ -50,7 +137,7 @@ count = 1
 weight = 1.0
 value = 35.0
 tags = Array[String](["Weapon"])
-weapon = SubResource("Resource_v8hqj")
+weapon = SubResource("Resource_t4guo")
 
 [node name="Main" type="Node"]
 script = ExtResource("1_rxuu2")
@@ -73,6 +160,9 @@ end = Vector2i(89, 119)
 
 [node name="Pawn" parent="." instance=ExtResource("4_6u247")]
 position = Vector2(168, 136)
+inventory = SubResource("Resource_w2078")
+
+[node name="EquipmentManager" parent="Pawn" instance=ExtResource("12_r0iqh")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("5_v7q21")
