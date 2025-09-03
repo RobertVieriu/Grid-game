@@ -13,15 +13,16 @@ var path = []
 
 func _ready():
 	#var hand_slot: EquipmentSlot = equipment.equipmentData.slots[0]
-	for s in inventory.item:	
-		if(s.name == "Dagger"):
-			if equipment.equip(equipment.equipmentData.slots[0], s):
-				print(s.name, " pre-equipped in hand")
+	for item in inventory.item:	
+		if(item.name == "Dagger"):
+			if equipment.equip(equipment.equipmentData.bodyParts[0], item):
+				print(item.name, " pre-equipped in ", equipment.equipmentData.bodyParts[0].name)
 				
-		if(s.name == "Shortsword"):
-			if equipment.equip(equipment.equipmentData.slots[1], s):
-				print(s.name, " pre-equipped in hand")
-
+		if(item.name == "Shortsword"):
+			if equipment.equip(equipment.equipmentData.bodyParts[1], item):
+				print(item.name, " pre-equipped in ", equipment.equipmentData.bodyParts[1].name)
+		for equippedItem in equipment.equipmentData.equipped:
+			print(equippedItem, " is equipped in: ", equippedItem)
 
 func _physics_process(delta):
 	

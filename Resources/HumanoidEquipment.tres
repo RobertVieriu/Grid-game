@@ -1,18 +1,23 @@
-[gd_resource type="Resource" script_class="Equipment" load_steps=5 format=3 uid="uid://b5cppi3xyo4wm"]
+[gd_resource type="Resource" script_class="EquipmentData" load_steps=6 format=3 uid="uid://b5cppi3xyo4wm"]
 
-[ext_resource type="Script" path="res://Scripts/equipment_data.gd" id="1_8eotn"]
-[ext_resource type="Script" path="res://Scripts/equipment_slot.gd" id="2_hbw74"]
+[ext_resource type="Script" path="res://Scripts/equipment_data.gd" id="1_crf2o"]
+[ext_resource type="Script" path="res://Scripts/body_part.gd" id="2_6ll1p"]
 
-[sub_resource type="Resource" id="Resource_xjtrq"]
-script = ExtResource("2_hbw74")
-name = "Hand"
+[sub_resource type="Resource" id="Resource_06dp0"]
+script = ExtResource("2_6ll1p")
+name = "Right Hand"
 allowed_tags = Array[String](["Weapon", "Shield"])
 
-[sub_resource type="Resource" id="Resource_ycqkp"]
-script = ExtResource("2_hbw74")
-name = "Hand"
+[sub_resource type="Resource" id="Resource_swgpa"]
+script = ExtResource("2_6ll1p")
+name = "Left Hand"
 allowed_tags = Array[String](["Weapon", "Shield"])
+
+[sub_resource type="Resource" id="Resource_4fsym"]
+script = ExtResource("2_6ll1p")
+name = "Head"
+allowed_tags = Array[String](["Helmet"])
 
 [resource]
-script = ExtResource("1_8eotn")
-slots = Array[ExtResource("2_hbw74")]([SubResource("Resource_xjtrq"), SubResource("Resource_ycqkp")])
+script = ExtResource("1_crf2o")
+bodyParts = Array[ExtResource("2_6ll1p")]([SubResource("Resource_06dp0"), SubResource("Resource_swgpa"), SubResource("Resource_4fsym")])

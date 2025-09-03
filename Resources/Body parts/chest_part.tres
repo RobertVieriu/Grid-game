@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BodyPart" load_steps=2 format=3 uid="uid://dae2m7tpbk4xe"]
+
+[ext_resource type="Script" path="res://Scripts/body_part.gd" id="1_mtjc2"]
+
+[resource]
+script = ExtResource("1_mtjc2")
+name = "Chest"
+allowed_tags = Array[String](["Chest"])

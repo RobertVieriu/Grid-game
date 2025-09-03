@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvmfxax0qrg1g"]
 
 [ext_resource type="Script" path="res://Scripts/dagger.gd" id="1_hw40o"]
-[ext_resource type="Resource" uid="uid://c31vsxo2ompdf" path="res://Resources/dagger.tres" id="2_sfrb2"]
+[ext_resource type="Resource" uid="uid://c31vsxo2ompdf" path="res://Resources/Weapons/dagger.tres" id="2_sfrb2"]
 
 [node name="Dagger" type="Sprite2D"]
 script = ExtResource("1_hw40o")
