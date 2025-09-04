@@ -14,15 +14,14 @@ var path = []
 func _ready():
 	#var hand_slot: EquipmentSlot = equipment.equipmentData.slots[0]
 	for item in inventory.item:	
-		if(item.name == "Dagger"):
-			if equipment.equip(equipment.equipmentData.bodyParts[0], item):
-				print(item.name, " pre-equipped in ", equipment.equipmentData.bodyParts[0].name)
+		if item.name == "Dagger":
+			equipment.equip(equipment.equipmentData.bodyParts[0], item)
 				
-		if(item.name == "Shortsword"):
-			if equipment.equip(equipment.equipmentData.bodyParts[1], item):
-				print(item.name, " pre-equipped in ", equipment.equipmentData.bodyParts[1].name)
-		for equippedItem in equipment.equipmentData.equipped:
-			print(equippedItem, " is equipped in: ", equippedItem)
+		if item.name == "Shortsword":
+			equipment.equip(equipment.equipmentData.bodyParts[1], item)
+
+		#for slot in equipment.equipmentData.equipped:
+			#print(slot.name, " has the item: " , equipment.equipmentData.equipped[slot].name)
 
 func _physics_process(delta):
 	
