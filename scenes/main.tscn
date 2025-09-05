@@ -119,16 +119,19 @@ item = Array[ExtResource("9_vldn4")]([SubResource("Resource_h5klx"), SubResource
 [sub_resource type="Resource" id="Resource_06dp0"]
 script = ExtResource("12_2nixq")
 name = "Right Hand"
+max_hp = 0
 allowed_tags = Array[String](["Weapon", "Shield"])
 
 [sub_resource type="Resource" id="Resource_swgpa"]
 script = ExtResource("12_2nixq")
 name = "Left Hand"
+max_hp = 0
 allowed_tags = Array[String](["Weapon", "Shield"])
 
 [sub_resource type="Resource" id="Resource_4fsym"]
 script = ExtResource("12_2nixq")
 name = "Head"
+max_hp = 0
 allowed_tags = Array[String](["Helmet"])
 
 [sub_resource type="Resource" id="Resource_fiw6s"]
