@@ -25,7 +25,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_just_pressed("right_click"):
 		var pos = position / terrain.rendering_quadrant_size
 		var targetPos = get_global_mouse_position() / terrain.rendering_quadrant_size
 		
