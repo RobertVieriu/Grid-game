@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8h3gx0h6taka"]
+
+[ext_resource type="Script" path="res://Scripts/UI/ui.gd" id="1_35nc3"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_35nc3")
+
+[node name="MainHUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Orders" type="HBoxContainer" parent="MainHUD"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+mouse_filter = 0
+
+[node name="BuildButton" type="Button" parent="MainHUD/Orders"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "For building stuff."
+text = "Build"
+
+[node name="WorkButton" type="Button" parent="MainHUD/Orders"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Work"
+
+[node name="ZonesButton" type="Button" parent="MainHUD/Orders"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Zones"
+
+[node name="AssignButton" type="Button" parent="MainHUD/Orders"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Assign"
+
+[node name="AnimalsButton" type="Button" parent="MainHUD/Orders"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Animals"
+
+[node name="ResearchButton" type="Button" parent="MainHUD/Orders"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Research"
+
+[node name="QuestsButton" type="Button" parent="MainHUD/Orders"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quests"
+
+[node name="WorldButton" type="Button" parent="MainHUD/Orders"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "World"

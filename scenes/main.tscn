@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://Scripts/equipment_data.gd" id="11_7qblf"]
 [ext_resource type="Script" path="res://Scripts/body_part.gd" id="12_2nixq"]
 [ext_resource type="PackedScene" uid="uid://dp0e6l0rmggcy" path="res://Scenes/equipment_manager.tscn" id="12_r0iqh"]
-[ext_resource type="PackedScene" uid="uid://c8h3gx0h6taka" path="res://Scenes/UI.tscn" id="14_4mi2j"]
+[ext_resource type="PackedScene" uid="uid://c8h3gx0h6taka" path="res://Scenes/UI/UI.tscn" id="14_4mi2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61nxq"]
 texture = ExtResource("1_qqge0")
