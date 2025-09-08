@@ -25,6 +25,7 @@ func _toggle_submenu(scene: PackedScene, button: Button):
 	current_submenu = scene.instantiate()
 	$MainHUD.add_child(current_submenu)
 	
-	await current_submenu.ready
-	var global_pos = button.get_global_position() - Vector2(0, button.size.y + current_submenu.y)
-	current_submenu.set_position(global_pos)
+	await get_tree().process_frame
+	
+	var global_pos = button.get_global_position() - Vector2(0, current_submenu.size.y)
+	current_submenu.set_global_position(global_pos)
