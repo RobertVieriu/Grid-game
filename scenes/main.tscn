@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://blvm58q0886ii"]
+[gd_scene load_steps=31 format=4 uid="uid://blvm58q0886ii"]
 
 [ext_resource type="Texture2D" uid="uid://0ysmt1oeyr2b" path="res://Assets/placeholder_terrain_tileset.png" id="1_qqge0"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_rxuu2"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://Scripts/body_part.gd" id="12_2nixq"]
 [ext_resource type="PackedScene" uid="uid://dp0e6l0rmggcy" path="res://Scenes/equipment_manager.tscn" id="12_r0iqh"]
 [ext_resource type="PackedScene" uid="uid://c8h3gx0h6taka" path="res://Scenes/UI/UI.tscn" id="14_4mi2j"]
+[ext_resource type="PackedScene" uid="uid://benm8sa38qfxu" path="res://Scenes/UI/SelectionManager.tscn" id="15_sr80f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61nxq"]
 texture = ExtResource("1_qqge0")
@@ -142,6 +143,8 @@ equipped = {}
 
 [node name="Main" type="Node"]
 script = ExtResource("1_rxuu2")
+
+[node name="SelectionManager" parent="." instance=ExtResource("15_sr80f")]
 
 [node name="UI" parent="." instance=ExtResource("14_4mi2j")]
 

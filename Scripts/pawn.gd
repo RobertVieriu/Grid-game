@@ -12,6 +12,10 @@ var path = []
 
 
 func _ready():
+	add_to_group("selectable")
+	$Highlight.visible = false
+	#var hightlight = load('res://Highlight')
+	#$Sprite2D.hightlight = hightlight
 	#var hand_slot: EquipmentSlot = equipment.equipmentData.slots[0]
 	for item in inventory.item:	
 		if item.name == "Dagger":
@@ -22,6 +26,11 @@ func _ready():
 
 		#for slot in equipment.equipmentData.equipped:
 			#print(slot.name, " has the item: " , equipment.equipmentData.equipped[slot].name)
+
+
+func set_selected(selected: bool):
+	$Highlight.visible = selected
+
 
 func _physics_process(delta):
 	

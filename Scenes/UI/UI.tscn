@@ -72,3 +72,9 @@ text = "Quests"
 layout_mode = 2
 size_flags_horizontal = 3
 text = "World"
+
+[node name="SelectionBox" type="ColorRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.45098, 0.627451, 1, 0.564706)
